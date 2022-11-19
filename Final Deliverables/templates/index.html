@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            Rainfall Prediction
+        </title>
+    </head>
+    <body background="https://images.unsplash.com/photo-1556485689-33e55ab56127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" text="black" style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="login">
+            <center><h1 style="color: White;">RAINFALL PREDICTION</h1></center>
+            <form action="{{ url_for('predict')}}"method="post">
+            </style></head>
+            
+        <center><label for="MinTemp" name="MinTemp" style="color: White;">MINTEMP:</label>
+            <input type="text"name="MinTemp" placeholder="MinTemp"></center><br>
+                <center><label for="MaxTemp" name="MaxTemp" style="color: White;">MAXTEMP:</label>
+            <input type="text" name="MaxTemp" placeholder="MaxTemp"></center><br>
+            <center><label for="Rainfall" name="Rainfall" style="color: White;">RAINFALL:</label>
+            <input type="text" name="Rainfall" placeholder="Rainfall"></center><br>
+            <center><label for="WindGustSpeed" name="WindGustSpeed" style="color: White;">WINDGUSTSPEED:</label>
+            <input type="text" name="WindGustSpeed" placeholder="WindGustSpeed"></center><br>
+            <center><label for="WindSpeed9am" name="WindSpeed9am" style="color: White;">WINDSPEED9AM</label>
+                <input type="text" name="WindSpeed9am" placeholder="WindSpeed9am"></center><br>
+            <center><label for="WindSpeed3pm" name="WindSpeed3pm" style="color: White;">WINDSPEED3PM</label>
+                <input type="text" name="WindSpeed3pm" placeholder="WindSpeed3pm"></center><br>
+            <center><label for="Humidity9am" name="Humidity9am" style="color: White;">HUMIDITY9AM</label>
+                <input type="text" name="Humidity9am" placeholder="Humidity9am"></center><br>
+                <center><label for="Humidity3pm" name="Humidity3pm" style="color: White;">HUMIDITY3PM</label>
+                <input type="text" name="Humidity3pm" placeholder="Humidity3pm"></center><br>
+                <center><label for="Pressure9am" name="Pressure9am" style="color: White;">PRESSURE9AM</label>
+		        <input type="text" name="Pressure9am" placeholder="Pressure9am"></center><br>
+                <center><label for="Pressure3pm" name="Pressure3pm" style="color: White;">PRESSURE3PM</label>
+		        <input type="text" name="Pressure3pm" placeholder="Pressure3pm"></center><br>
+                <center><label for="Temp9am" name="Temp9am" style="color: White;">TEMPERATURE9AM</label>
+		        <input type="text" name="Temp9am" placeholder="Temp9am"></center><br>
+                <center><label for="Temp3pm" name="Temp3pm" style="color: White;">TEMPERATURE3PM</label>
+                     <input type="text" name="Temp3pm" placeholder="Temp3pm"></center><br>
+                     <center><label for="RainToday" style="color: White;">RAINTODAY:</label> <select id="RainToday" name="RainToday">
+                                        <option value=0>No<option>
+                                        <option value=1>Yes<option>
+                                        </select>&nbsp;&nbsp;</center><br>
+                                        <center><label for="WindGustDir" style="color: White;">WINDGUSTDIR:</label> <select id="WindGustDir" name="WindGustDir">
+                                        <option value=13>W<option>
+                                        <option value=14>WNW<option>
+                                        <option value=15>WSW<option> 
+                                        <option value=4>NE<option> 
+                                        <option value=6>NNW<option> 
+                                        <option value=3>N<option> 
+                                        <option value=5>NNE<option> 
+                                        <option value=12>SW<option> 
+                                        <option value=1>ENE<option>
+                                        <option value=10>SSE<option> 
+                                        <option value=8>S<option> 
+                                        <option value=7>NW<option> 
+                                        <option value=9>SE<option> 
+                                        <option value=2>ESE<option> 
+                                        <option value=0>E<option> 
+                                        <option value=11>SSW<option>
+                                        </select>&nbsp;&nbsp;</center><br>
+                                        <center><label for="WindDir9am" style="color: White;">WINDDIR9AM:</label> <select id="WindDir9am" name="WindDir9am">
+                                                <option value=13>W<option>
+                                                    <option value=14>WNW<option>
+                                                    <option value=15>WSW<option> 
+                                                    <option value=4>NE<option> 
+                                                    <option value=6>NNW<option> 
+                                                    <option value=3>N<option> 
+                                                    <option value=5>NNE<option> 
+                                                    <option value=12>SW<option> 
+                                                    <option value=1>ENE<option>
+                                                    <option value=10>SSE<option> 
+                                                    <option value=8>S<option> 
+                                                    <option value=7>NW<option> 
+                                                    <option value=9>SE<option> 
+                                                    <option value=2>ESE<option> 
+                                                    <option value=0>E<option> 
+                                                    <option value=11>SSW<option>
+                                        </select>&nbsp;&nbsp;</center><br>
+                                        <center><label for="WindDir3pm" style="color: White;">WINDDIR3PM:</label> <select id="WindDir3pm" name="WindDir3pm">
+                                                    <option value=13>W<option>
+                                                        <option value=14>WNW<option>
+                                                        <option value=15>WSW<option> 
+                                                        <option value=4>NE<option> 
+                                                        <option value=6>NNW<option> 
+                                                        <option value=3>N<option> 
+                                                        <option value=5>NNE<option> 
+                                                        <option value=12>SW<option> 
+                                                        <option value=1>ENE<option>
+                                                        <option value=10>SSE<option> 
+                                                        <option value=8>S<option> 
+                                                        <option value=7>NW<option> 
+                                                        <option value=9>SE<option> 
+                                                        <option value=2>ESE<option> 
+                                                        <option value=0>E<option> 
+                                                        <option value=11>SSW<option>
+                                    </select>&nbsp;&nbsp;</center><br>
+        
+<br>
+
+<center><button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">PREDICT</button></center>
+</form> <br>
+{{ prediction_text }}
+<br> <br> 
+<img src="data:image/png;base64, {{url_3}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/> 
+<img src="data:image/png;base64, {{url_1}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/> 
+<img src="data:image/png;base64,{{url_4}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/> 
+<br> <br> 
+<img src="data:image/png;base64,{{ur1_2}}" alt="Submit Form" height="150" width="711" onerror="this.style.display='none'"/>
+</div>
+        
+    </body>
+</html>
